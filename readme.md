@@ -1,0 +1,27 @@
+# 🔍 DorkyScanner Hi there my dear scriptkidde 
+
+**DorkyScanner** is a lightweight, interactive Bash script that helps you run a series of **Google Dork** searches against any domain of your choice. It's ideal for OSINT gathering, recon, and vulnerability scanning using nothing but your browser and a terminal.
+
+---
+
+## 🚀 Features
+
+- 🎯 Interactive domain input
+- 🔎 15+ pre-defined Google Dorks You can change how many you want ;D 
+- 🌐 Opens search results directly in your browser
+- 💻 100% Bash – no dependencies
+
+---
+
+## 📦 How to Use
+
+### 1. Clone the repo and make the script executable
+
+git clone https://github.com/yourusername/dorkyscanner.git
+cd dorkyscanner
+chmod +x dorkyscanner.sh
+
+
+
+RUN THE SCRIPT
+./dorkyscanner.sh
