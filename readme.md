@@ -1,5 +1,8 @@
 # 🔍 DorkyScanner Hi there my dear scriptkidde 
 
+NOTE: This is a simple dork scanner not yet done will include more on it 
+
+
 **DorkyScanner** is a lightweight, interactive Bash script that helps you run a series of **Google Dork** searches against any domain of your choice. It's ideal for OSINT gathering, recon, and vulnerability scanning using nothing but your browser and a terminal.
 
 ---
