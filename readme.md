@@ -25,3 +25,6 @@ chmod +x dorkyscanner.sh
 
 RUN THE SCRIPT
 ./dorkyscanner.sh
+
+
+![image](https://github.com/user-attachments/assets/029fa189-adef-4e63-95d0-46dc3e3af5b8)
