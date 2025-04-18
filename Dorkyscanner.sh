@@ -20,19 +20,18 @@ cat << "EOF"
 
 
 EOF
-# 🎯 Brukerinput for hvilket domene som skal dorkes
+# 🎯 User input for which domain to dork
 
 GREEN='\033[1;32m'
 BLUE='\033[1;34m'
 NC='\033[0m'
 
-echo -ne "${GREEN}🔍 Hvilket domene vil du dorke? (f.eks. finn.no): ${NC}"
+echo -ne "${GREEN}🔍 Which domain do you want to dork? (e.g. netflix.com): ${NC}"
 read DOMAIN
 
-echo -e "${BLUE}👉 Du valgte: $DOMAIN ${NC}"
+echo -e "${BLUE}👉 You selected: $DOMAIN ${NC}"
 
-
-# 🔎 Liste over Google Dorks
+# 🔎 List of Google Dorks
 DORKS=(
   'inurl:.env'
   'inurl:.git'
@@ -52,16 +51,18 @@ DORKS=(
   'inurl:openapi.json'
 )
 
-echo -e "\n\033[1;32m[+] Starter Google Dork-søk på $TARGET\033[0m"
+echo -e "\n\033[1;32m[+] Starting Google Dork search on $DOMAIN\033[0m"
 
-# 🚀 Åpner alle dorks i nettleseren
+# 🚀 Open all dorks in browser
 for dork in "${DORKS[@]}"; do
-  query="$TARGET $dork"
+  query="site:$DOMAIN $dork"
   url="https://www.google.com/search?q=$(echo "$query" | sed 's/ /+/g')"
-  echo -e "\033[1;34m[*]\033[0m Åpner: $query"
+  echo -e "\033[1;34m[*]\033[0m Opening: $query"
   xdg-open "$url" >/dev/null 2>&1
   sleep 1
 done
 
+echo -e "\n\033[1;32m[✓] Done! All dork searches opened in the browser.\033[0m"
 
-echo -e "\n\033[1;32m[✓] Ferdig! Alle dork-søk er åpnet i nettleseren.\033[0m"
+
+
